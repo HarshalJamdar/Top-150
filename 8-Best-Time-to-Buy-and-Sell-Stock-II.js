@@ -29,7 +29,7 @@ var maxProfit = function(prices) {
             total_profit += prices[i] - prices[i - 1];
         }
     }
-    return total_profit  
+    return total_profit;  
 };
 
 console.log(maxProfit([7,1,5,3,6,4])); // Output: 7

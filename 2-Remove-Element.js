@@ -4,19 +4,23 @@
 // Return k.
 
 // Input: nums = [0,1,2,2,3,0,4,2], val = 2
-// Output: 5, nums = [0,1,4,0,3,_,_,_]
+// Output: 5, nums = [0,1,3,0,4,_,_,_]
 // Explanation: Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.
 // Note that the five elements can be returned in any order.
 // It does not matter what you leave beyond the returned k (hence they are underscores)
 
 var removeElement = function(nums, val) {
-    let i = 0;
-    for(let j=0; j< nums.length; j++){
-       if(nums[j] !== val){
-        nums[i] = nums[j];
-        i++;
+    let j = 0;
+    for(let i=0; i<nums.length; i++){
+       if(nums[i] !== val){
+        nums[j] = nums[i];
+        j++;
        }
     }
     console.log(nums);
-    return i;
+    return j;
 };
+
+console.log(removeElement([0,1,2,2,3,0,4,2],2));
+
+//output: [0, 1, 3, 0, 4, 0, 4, 2]

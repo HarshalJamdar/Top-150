@@ -22,3 +22,5 @@ var removeDuplicates = function(nums) {
     
     return i + 1; // The length of the array with unique elements
 };
+
+console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]));
