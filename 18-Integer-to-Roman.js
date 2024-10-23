@@ -57,7 +57,6 @@ function intToRoman(num) {
     ];
 
     let result = '';
-
     for (let i = 0; i < romanMap.length; i++) {
         const { value, symbol } = romanMap[i];
         while (num >= value) {
@@ -65,7 +64,6 @@ function intToRoman(num) {
             num -= value;
         }
     }
-
     return result;
 }
 
@@ -96,20 +94,20 @@ console.log(intToRoman(1994));  // Output: "MCMXCIV"
 // For each symbol in romanMap, we check how many times the value can be subtracted from the input number, appending the symbol to the result string each time.
 // The process continues until the input number is reduced to zero.
 // Example Walkthrough:
-// For input 3749:
 
+// For input 3749:
 // 3000 = "MMM" (M is appended three times)
 // 700 = "DCC" (D is appended once for 500, and C twice for 100)
 // 40 = "XL" (40 is handled by the subtractive form XL)
 // 9 = "IX" (9 is handled by the subtractive form IX)
 // Result = "MMMDCCXLIX"
-// For input 58:
 
+// For input 58:
 // 50 = "L" (L is appended for 50)
 // 8 = "VIII" (V is appended for 5, and I is appended three times for 3)
 // Result = "LVIII"
-// For input 1994:
 
+// For input 1994:
 // 1000 = "M" (M is appended once)
 // 900 = "CM" (CM is the subtractive form for 900)
 // 90 = "XC" (XC is the subtractive form for 90)

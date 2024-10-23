@@ -32,7 +32,6 @@ function trap(height) {
             right--;
         }
     }
-    
     return totalWater;
 }
 
